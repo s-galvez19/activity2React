@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>React/title>
+     
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script>
+            window.onload = function()
+            {
+                class Greetings extends React.Component
+                {
+                    render()
+                    {
+                        return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
+                    }
+                }
+                ReactDOM.render(
+                    React.createElement(Greetings, { name : 'Steven' }),
+                    document.getElementById('root')
+                );
+            };
+        </script>
+    </body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js'></script>
+</html>
